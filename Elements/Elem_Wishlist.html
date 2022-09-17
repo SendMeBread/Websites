@@ -8,7 +8,7 @@
   <script type="text/javascript">
     function showElement(Id){
       var element = document.getElementById(Id);
-      element.style.opacity = 0.4;
+      element.style.opacity = 1;
     };
     function hideElement(Id){
       var element = document.getElementById(Id);
@@ -21,20 +21,19 @@
       font-size: 12pt;
       background-color: black;
       color: silver;
+      position: relative;
     }
     img{
       opacity: 0;
       margin: auto;
-      float: right;
-      z-index: -1;
-    }
-    div{
-      font-family: "Courier New", sans-serif;
+      position: absolute;
+      top: 20px;
+      right: 10px;
     }
   </style>
 </head>
   <body>
-    <div onmouseover="showElement('Al')" onmouseout="hideElement('Al')">Aluminum</div><br> <div onmousedown="showElement('Bi')" onmouseout="hideElement('Bi')">Bismuth</div><br> <div>Cobalt</div><br> <div>Germanium</div><br> <div>Molybdenum</div><br> <div>Scandium</div><br> <div>Silicon</div><br> <div>Silver</div><br> <div>Sulfur</div><br> <div>Titanium</div><br> <div>Tungsten</div><br> <div>Vanadium</div><br> <div>Zinc</div>
+    <p onmouseover="showElement('Al')" onmouseout="hideElement('Al')">Aluminum</p> <p onmouseover="showElement('Bi')" onmouseout="hideElement('Bi')">Bismuth</p> <p onmouseover="showElement('Co')" onmouseout="hideElement('Co')">Cobalt</p> <p onmouseover="showElement('Ge')" onmouseout="hideElement('Ge')">Germanium</p> <p>Molybdenum</p> <p>Scandium</p> <p>Silicon</p> <p>Silver</p> <p>Sulfur</p> <p>Titanium</p> <p>Tungsten</p> <p>Vanadium</p> <p>Zinc</p>
     <img src="Aluminum.png" alt="Aluminum" id="Al">
     <img src="Bismuth.png" alt="Bismuth" id="Bi">
     <img src="Cobalt.png" alt="Cobalt" id="Co">
