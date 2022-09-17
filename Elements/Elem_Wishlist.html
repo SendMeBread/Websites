@@ -6,6 +6,14 @@
   <meta name="viewport" content="width=device-width">
   <title>Element Wishlist</title>
   <script type="text/javascript">
+    function showElement(Id){
+      var element = document.getElementById(Id);
+      element.style.opacity = 0.4;
+    };
+    function hideElement(Id){
+      var element = document.getElementById(Id);
+      element.style.opacity = 0;
+    };
   </script>
   <style type="text/css">
     body{
@@ -16,8 +24,10 @@
     }
     img{
       opacity: 0;
-      width: 100vw;
-      height: 100vh;
+      margin: auto;
+      z-index: -1;
+      float: right;
+      vertical-align: 325pt;
     }
     div{
       font-family: "Courier New", sans-serif;
@@ -25,10 +35,11 @@
   </style>
 </head>
   <body>
-    <div id="Al">Aluminum</div><br> <div id="Bi">Bismuth</div><br> <div id="Co">Cobalt</div><br> <div id="Ge">Germanium</div><br> <div id="Mo">Molybdenum</div><br> <div id="Sc">Scandium</div><br> <div id="Si">Silicon</div><br> <div id="Ag">Silver</div><br> <div id="S">Sulfur</div><br> <div id="Ti">Titanium</div><br> <div id="W">Tungsten</div><br> <div id="V">Vanadium</div><br> <div id="Zn">Zinc</div>
-    <img src="Aluminum.png">
-    <img src="Bismuth.png">
-    <img src="Cobalt.png">
+    <div onmouseover="showElement('Al')" onmouseout="hideElement('Al')">Aluminum</div><br> <div>Bismuth</div><br> <div>Cobalt</div><br> <div>Germanium</div><br> <div>Molybdenum</div><br> <div>Scandium</div><br> <div>Silicon</div><br> <div>Silver</div><br> <div>Sulfur</div><br> <div>Titanium</div><br> <div>Tungsten</div><br> <div>Vanadium</div><br> <div>Zinc</div>
+    <img src="Aluminum.png" alt="Aluminum" id="Al">
+    <img src="Bismuth.png" alt="Bismuth" id="Bi">
+    <img src="Cobalt.png" alt="Cobalt" id="Co">
+    <img src="Germanium.png" alt="Germanium" id="Ge">
     <br>
     <br>
       <footer>
