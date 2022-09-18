@@ -6,6 +6,7 @@
   <title>PToE</title>
   <link rel="icon" type="image/x-icon" href="Atom.png">
   <script type="text/javascript">
+    //Show and hide element pictures
     function showElement(Id){
       var element = document.getElementById(Id);
       element.style.opacity = 1;
@@ -24,12 +25,12 @@
       position: relative;
     }
     img{
-      opacity: 0;
+      opacity: 0; /* Hide element images */
       margin: auto;
       position: absolute;
       top: 20px;
       right: 10px;
-      z-index: -1;
+      z-index: -1; /* Put element picture behind text, allowing activation */
     }
     h1{
       color: #0000ff;
@@ -61,6 +62,7 @@
   </style>
 </head>
   <body>
+    <!--Instructions:-->
     <h1>Hover over an element's name to view it's place in the Periodic Table! This list is sorted in Alphabetical Order.</h1>
     <div class="row">
       <div class="column left">
@@ -83,12 +85,14 @@
         <p onmouseover="showElement('V')" onmouseout="hideElement('V')" style="color: #99ca3d;">Vanadium | V | 23</p>
       </div>
       <div class="column middle">
+        <!--Element listing column 2-->
         <p onmouseover="showElement('Zn')" onmouseout="hideElement('Zn')" style="color: #99ca3d;">Zinc | Zn | 30</p>
       </div>
       <div class="column right">
-        Hi
+        <!--Element listing column 3-->
       </div>
     </div>
+    <!--Images of element placement-->
     <img src="Elem_Images/Actinium.png" alt="Actinium" id="Ac">
     <img src="Elem_Images/Aluminum.png" alt="Aluminum" id="Al">
     <img src="Elem_Images/Americium.png" alt="Americium" id="Am">
@@ -107,6 +111,7 @@
     <img src="Elem_Images/Vanadium.png" alt="Vanadium" id="V">
     <img src="Elem_Images/Zinc.png" alt="Zinc" id="Zn">
     <br><br><br><br>
+    <!--Validation Links-->
       <footer>
     <a id="hvLINK" style="color: #ff6600;"><strong> HTML </strong> Valid! </a> |
 <a id="cvLINK" style="color: #6699ff;"><strong> CSS </strong> Valid! </a>
