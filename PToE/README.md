@@ -8,5 +8,5 @@
 
 # Fun Facts Shenanigans
 
-*There is a general page that will link you to all the different element fun fact topics (i.e. Chemical Properties, Physical Properties, etc.)
-*You can find the general page through the GUI PToE page, it links to it.
+* There is a general page that will link you to all the different element fun fact topics (i.e. Chemical Properties, Physical Properties, etc.)
+* You can find the general page through the GUI PToE page, it links to it.
