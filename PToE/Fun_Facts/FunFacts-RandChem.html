@@ -5,6 +5,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Fun Facts - Random Chem</title>
 	<link rel="icon" type="image/x-icon" href="FunFavicon.png">
+	<script>
+		function init() {
+	      var loc = window.location.href;
+	      var HTMLvalidLinkStr = 'http://validator.w3.org/check?uri=' + loc;
+	      var CSSvalidLinkStr = 'http://jigsaw.w3.org/css-validator/validator?uri=' +
+	                            loc + '?profile=css3';
+	      document.getElementById("vlink1").setAttribute("href", HTMLvalidLinkStr);
+	      document.getElementById("vlink2").setAttribute("href", CSSvalidLinkStr);
+	    }
+	    windows.onload = init;
+	</script>
 	<style>
 		body{
 			background-color: #046307;
@@ -24,7 +35,7 @@
 		<a href="FunFacts_Home.html" style="color: #b5ffed;">Back...</a> | <a href="../../index.html" style="color: #b5ffed;">Home</a>
 	</footer>
 	<br><br><br>
-	<a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fsendmebread.github.io%2FWebsites%2FPToE%2FFun_Facts%2FFunFacts-RandChem.html" style="color: #ff6600;"><strong> HTML </strong> Valid! </a> |
-<a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsendmebread.github.io%2FWebsites%2FPToE%2FFun_Facts%2FFunFacts-RandChem.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" style="color: #6699ff;"><strong> CSS </strong> Valid! </a>
+	<a id="vlink1" style="color: #ff6600;"><strong> HTML </strong> Valid! </a> |
+<a id="vlink2" style="color: #6699ff;"><strong> CSS </strong> Valid! </a>
 </body>
 </html>
