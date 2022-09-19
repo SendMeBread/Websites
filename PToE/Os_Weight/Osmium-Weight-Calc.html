@@ -7,7 +7,8 @@
 	<link rel="icon" type="image/x-icon" href="Os.png">
 	<script>
 	    var maxVolume = Number.MAX_VALUE;
-	    const maxVolume = (maxVolume / 9.8) / 22.59;
+	    var maxVolume = (maxVolume / 9.8) / 22.59;
+	    const maxVolume.toLocaleString()
 	    document.getElementById("cmInput").setAttribute("max", maxVolume);
 		function calcWeight(){
 			var Volume = document.getElementById("cmInput").value;
