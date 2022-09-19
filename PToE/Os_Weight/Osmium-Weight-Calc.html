@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Os Weight Calc</title>
+	<link rel="icon" type="image/x-icon" href="Os.png">
+	<script>
+		function calcWeight(){
+			var Volume = document.getElementById("cmInput").value;
+			var Mass = 22.59 * Volume;
+			var W = Mass * 9.8;
+			document.getElementById("Weight").innerHTML = W + "N";
+		};
+	</script>
+	<style>
+		body{
+			background-color: #000000;
+			color: #00ff00;
+			font-family: "Andale Mono, Courier New", "Courier", monospace;
+		}
+	</style>
+</head>
+<body>
+	<form >
+		<label for="meterInput">Input Volume (cm<sup>3</sup>)</label>
+		<br><br>
+		<input onchange="calcWeight()" type="number" name="cmInput" id="cmInput" min="0" style="border-width: 4.5pt; border-color: #00ff00; background-color: #000000; color: #00ff00; font-family: 'Andale Mono', 'Courier New', 'Courier', monospace">
+	</form>
+	<br>Weight:<br>
+	<p id="Weight"></p>
+	<a href="../GUI_PToE.html">Back...</a> | <a href="Home"></a>
+	<footer>
+		
+	</footer>
+</body>
+</html>
