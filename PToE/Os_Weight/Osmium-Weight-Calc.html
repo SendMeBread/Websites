@@ -9,38 +9,39 @@
 		function calcWeight(){
 			var Unit = document.getElementById("chooseUnit").value;
 			var Volume = document.getElementById("volumeInput").value;
+			var Gravity = document.getElementById("gravityInput").value;
 			if (Unit == "mm") {
 				var Mass = 2.259 * Volume;
-				var W = Mass * 9.8;
+				var W = Mass * Gravity;
 			};
 			if (Unit == "cm") {
 				var Mass = 22.59 * Volume;
-				var W = Mass * 9.8;
+				var W = Mass * Gravity;
 			};
 			if (Unit == "m") {
 				var Mass = 22590 * Volume;
-				var W = Mass * 9.8;
+				var W = Mass * Gravity;
 			};
 			if (Unit == "km") {
 				var Mass = 2259000 * Volume;
-				var W = Mass * 9.8;
+				var W = Mass * Gravity;
 			};
 			if (Unit == "in") {
 				var Mass = 57.3786 * Volume;
-				var W = Mass * 9.8;
+				var W = Mass * Gravity;
 			};
 			if (Unit == "ft") {
 				var Mass = 688.5432* Volume;
-				var W = Mass * 9.8;
+				var W = Mass * Gravity;
 			};
 			if (Unit == "yd") {
 				var Mass = 2065.6296 * Volume;
-				var W = Mass * 9.8;
+				var W = Mass * Gravity;
 			}
 			if (Unit == "mi") {
 				var Mass = 3635508.1 * Volume;
-				var W = Mass * 9.8; 
-			}
+				var W = Mass * Gravity; 
+			};
 			document.getElementById("Weight").innerHTML = W + "N."
 		};
 		function init() {
@@ -66,7 +67,7 @@
 </head>
 <body>
 	<form >
-		<label for="volumeInput">Input Volume:</label>
+		<label for="volumeInput">Input Volume</label>
 		<br><br>
 		<input onchange="calcWeight()" type="number" name="volumeInput" id="volumeInput" min="0" step="0.25" style="border-width: 4.5pt; border-color: #00ff00; background-color: #000000; color: #00ff00; font-family: 'Andale Mono', 'Courier New', 'Courier', monospace">
 		<select onchange="calcWeight()" id="chooseUnit">
@@ -80,6 +81,9 @@
 			<option id="mi" value="mi">mi</option>
 		</select>
 		<sup>3</sup>
+		<br>
+		<label for="gravityInput">Input Gravity (Planetary Constants Linked <a href="Surface-Gravity_Constants.html" style="color: #00ff00;">Here</a></label>)
+		<input onchange="calcWeight()" type="number" name="gravityInput" id="gravityInput" min="0" step="0.25" style="border-width: 4.5pt; border-color: #00ff00; background-color: #000000; color: #00ff00; font-family: 'Andale Mono', 'Courier New', 'Courier', monospace">
 	</form>
 	<br>Weight:<br>
 	<p id="Weight"></p>
