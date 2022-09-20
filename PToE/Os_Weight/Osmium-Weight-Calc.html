@@ -67,7 +67,6 @@
 </head>
 <body>
 	<form >
-		<label for="volumeInput">Input Volume</label>
 		<br><br>
 		<input onchange="calcWeight()" type="number" name="volumeInput" id="volumeInput" min="0" step="0.25" style="border-width: 4.5pt; border-color: #00ff00; background-color: #000000; color: #00ff00; font-family: 'Andale Mono', 'Courier New', 'Courier', monospace">
 		<select onchange="calcWeight()" id="chooseUnit">
@@ -81,10 +80,10 @@
 			<option id="mi" value="mi">mi</option>
 		</select>
 		<sup>3</sup>
-		<br>
-		<label for="gravityInput">Input Gravity (Planetary Constants Linked <a href="Surface-Gravity_Constants.html" style="color: #00ff00;">Here</a></label>)
 		<input onchange="calcWeight()" type="number" name="gravityInput" id="gravityInput" min="0" step="0.25" style="border-width: 4.5pt; border-color: #00ff00; background-color: #000000; color: #00ff00; font-family: 'Andale Mono', 'Courier New', 'Courier', monospace"> m/s<sup>2</sup>
 	</form>
+	<br>
+	<a href="Surface-Gravity_Constants.html" style="color: #00ff00;">Gravity Constants in Our Solar System</a>
 	<br>Weight:<br>
 	<p id="Weight"></p>
 	<a href="../GUI_PToE.html" style="color: ghostwhite;">Back...</a> | <a href="../../index.html" style="color: ghostwhite;">Home</a>
