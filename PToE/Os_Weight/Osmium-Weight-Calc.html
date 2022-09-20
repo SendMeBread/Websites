@@ -7,10 +7,41 @@
 	<link rel="icon" type="image/x-icon" href="Os.png">
 	<script>
 		function calcWeight(){
-			var Volume = document.getElementById("cmInput").value;
-			var Mass = 22.59 * Volume;
-			var W = Mass * 9.8;
-			document.getElementById("Weight").innerHTML = W + "N";
+			var Unit = document.getElementById("chooseUnit").value;
+			var Volume = document.getElementById("volumeInput").value;
+			if (Unit == "mm") {
+				var Mass = 2.259 * Volume;
+				var W = Mass * 9.8;
+			};
+			if (Unit == "cm") {
+				var Mass = 22.59 * Volume;
+				var W = Mass * 9.8;
+			};
+			if (Unit == "m") {
+				var Mass = 22590 * Volume;
+				var W = Mass * 9.8;
+			};
+			if (Unit == "km") {
+				var Mass = 2259000 * Volume;
+				var W = Mass * 9.8;
+			};
+			if (Unit == "in") {
+				var Mass = 57.3786 * Volume;
+				var W = Mass * 9.8;
+			};
+			if (Unit == "ft") {
+				var Mass = 688.5432* Volume;
+				var W = Mass * 9.8;
+			};
+			if (Unit == "yd") {
+				var Mass = 2065.6296 * Volume;
+				var W = Mass * 9.8;
+			}
+			if (Unit == "mi") {
+				var Mass = 3635508.1 * Volume;
+				var W = Mass * 9.8; 
+			}
+			document.getElementById("Weight").innerHTML = W + "N."
 		};
 		function init() {
 	      var loc = window.location.href;
@@ -20,7 +51,7 @@
 	      document.getElementById("vlink1").setAttribute("href", HTMLvalidLinkStr);
 	      document.getElementById("vlink2").setAttribute("href", CSSvalidLinkStr);
 	    }
-	    windows.onload = init;
+	    window.onload = init;
 	</script>
 	<style>
 		body{
@@ -35,9 +66,20 @@
 </head>
 <body>
 	<form >
-		<label for="cmInput">Input Volume (cm<sup>3</sup>)</label>
+		<label for="volumeInput">Input Volume:</label>
 		<br><br>
-		<input onchange="calcWeight()" type="number" name="cmInput" id="cmInput" min="0" step="0.25" style="border-width: 4.5pt; border-color: #00ff00; background-color: #000000; color: #00ff00; font-family: 'Andale Mono', 'Courier New', 'Courier', monospace">
+		<input onchange="calcWeight()" type="number" name="volumeInput" id="volumeInput" min="0" step="0.25" style="border-width: 4.5pt; border-color: #00ff00; background-color: #000000; color: #00ff00; font-family: 'Andale Mono', 'Courier New', 'Courier', monospace">
+		<select onchange="calcWeight()" id="chooseUnit">
+			<option id="mm" value="mm">mm</option>
+			<option id="cm" selected value="cm">cm</option>
+			<option id="m" value="m">m</option>
+			<option id="km" value="km">km</option>
+			<option id="in" value="in">in</option>
+			<option id="ft" value="ft">ft</option>
+			<option id="yd" value="yd">yd</option>
+			<option id="mi" value="mi">mi</option>
+		</select>
+		<sup>3</sup>
 	</form>
 	<br>Weight:<br>
 	<p id="Weight"></p>
