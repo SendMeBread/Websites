@@ -46,6 +46,14 @@
 				var Mass = 14960000000000 * Volume;
 				var W = Mass * Gravity;
 			}
+			if (Unit == "ly") {
+				var Mass = 946070400000000000 * Volume;
+				var W = Mass * Gravity;
+			}
+			if (Unit == "pc") {
+				var Mass = 3084189504000000000 * Volume;
+				var W = Mass * Gravity;
+			}
 			document.getElementById("Weight").innerHTML = W + "N."
 		};
 		function init() {
@@ -76,7 +84,7 @@
 		<input onchange="calcWeight()" type="number" name="volumeInput" id="volumeInput" min="0" step="0.25" style="border-width: 4.5pt; border-color: #00ff00; background-color: #000000; color: #00ff00; font-family: 'Andale Mono', 'Courier New', 'Courier', monospace">
 		<select onchange="calcWeight()" id="chooseUnit">
 			<option id="mm" value="mm">mm</option>
-			<option id="cm" selected value="cm">cm</option>
+			<option id="cm" value="cm" selected>cm</option>
 			<option id="m" value="m">m</option>
 			<option id="km" value="km">km</option>
 			<option id="in" value="in">in</option>
@@ -84,6 +92,8 @@
 			<option id="yd" value="yd">yd</option>
 			<option id="mi" value="mi">mi</option>
 			<option id="AU" value="AU">AU</option>
+			<option id="ly" value="ly">ly</option>
+			<option id="pc" value="pc">pc</option>
 		</select>
 		<sup>3</sup>
 		<input onchange="calcWeight()" type="number" name="gravityInput" id="gravityInput" min="0" step="0.25" style="border-width: 4.5pt; border-color: #00ff00; background-color: #000000; color: #00ff00; font-family: 'Andale Mono', 'Courier New', 'Courier', monospace"> m/s<sup>2</sup>
