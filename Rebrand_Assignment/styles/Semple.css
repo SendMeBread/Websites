@@ -1,0 +1,13 @@
+body{
+    background: radial-gradient(#6d704f, #079b00, #0f8e99, #03ca00, #ac6323, #6da04f, #ad704f), linear-gradient( #ad704f, #ac6323, #0f8e99);
+    background-size: 100vw 100vh;
+    color: #095b00;
+}
+a{
+    color: #dcb887;
+    text-decoration: underline #dc143c;
+}
+#DaTank{
+    width: calc(100vw - 50%);
+    height: calc(100vh - 50%);
+}
