@@ -9,7 +9,7 @@
     <style>
         html{
             background-color: #000;
-            scroll-behavior: smooth; /* No immediate scrolling */
+            scroll-behavior: smooth;/* No immediate scrolling */
         }
         body{
             background-image: linear-gradient(#000 30%, #6f4f1d 60%, #00e, #ffe0bd);
@@ -37,7 +37,8 @@
             margin-right: 25pt;
         }
         #song{
-            background: -webkit-linear-gradient(#00e 10%, #ffe0bd 70%, #6f4f1d); /* Is really for text */
+            background: -webkit-linear-gradient(#00e 10%, #ffe0bd 70%, #6f4f1d);/* Is really
+            for text, not background */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             color: transparent;
@@ -62,7 +63,7 @@
 <body>
 <!--Top of Page-->
     <img id="TopDeod" src="AxeBodySpray.png" alt="FavDeodorant">
-    <button id="scroll">See Sponsor:</button>
+    <button id="scroll">View Sponsor:</button>
 <!--Song Start-->
     <main id="song">
     </main>
@@ -83,7 +84,8 @@
         function init() {
             const loc = window.location.href;
             const HTMLvalidLink = 'http://validator.w3.org/check?uri=' + loc;
-            const CSSvalidLink = 'http://jigsaw.w3.org/css-validator/validator?uri=' + loc + '?profile=css3';
+            const CSSvalidLink = 'http://jigsaw.w3.org/css-validator/validator?uri=' + loc
+             + '?profile=css3';
             document.getElementById("vLink1").setAttribute("href", HTMLvalidLink);
             document.getElementById("vLink2").setAttribute("href", CSSvalidLink);
         };
