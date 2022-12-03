@@ -6,16 +6,17 @@
     <title>Axe Body Spray</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap">
     <style>
         body{
-            background-image: linear-gradient(#733 80%, #00f, #ffe0bd);
+            background-image: linear-gradient(#000 30%, #733 60%, #00e, #ffe0bd);
             font-family: 'Rubik Microbe';
             font-size: 22px;
             text-align: center;
             color: #0000fa;
         }
         #song{
-            background: -webkit-linear-gradient(#ffe0bd 70%, #701);
+            background: -webkit-linear-gradient(#00e 10%, #ffe0bd 70%, #701);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             color: transparent;
@@ -33,12 +34,18 @@
             width: 80vw;
             height: 40vh;
         }
+        #sponsor{
+            font-family: 'Orbitron', sans-serif;
+            color: #000;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
     <img id="TopDeod" class="Deodorant" src="AxeBodySpray.png">
     <main id="song">
     </main>
+    <p id="sponsor">Sponsored By:</p>
     <img id="logo" class="Deodorant" src="AxeLogo.png">
     <script>
         const newline = document.createElement("br");
