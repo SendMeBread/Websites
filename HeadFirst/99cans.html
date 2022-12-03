@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Axe Body Spray</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap">
+    <style>
+        body{
+            background-image: linear-gradient(#733 80%, #00f, #ffe0bd);
+            font-family: 'Rubik Microbe';
+            font-size: 22px;
+            text-align: center;
+            color: #0000fa;
+        }
+        #song{
+            background: -webkit-linear-gradient(#ffe0bd 70%, #701);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+
+        }
+        #TopDeod{
+            rotate: 35deg;
+            width: 54.4vh;
+            height: 54.4vw;
+        }
+        .Deodorant{
+            z-index: -1;
+        }
+        #logo{
+            width: 80vw;
+            height: 40vh;
+        }
+    </style>
+</head>
+<body>
+    <img id="TopDeod" class="Deodorant" src="AxeBodySpray.png">
+    <main id="song">
+    </main>
+    <img id="logo" class="Deodorant" src="AxeLogo.png">
+    <script>
+        const newline = document.createElement("br");
+        let song = document.getElementById("song");
+        var cans = 99;
+        while (cans > 1){
+            const songAppend = cans + " cans of Axe Body Spray on the wall";
+            song.innerHTML += songAppend;
+            song.appendChild(newline)
+            song.innerHTML += songAppend;
+            song.appendChild(newline)
+            song.innerHTML += "Take one down, pass it around,";
+            song.appendChild(newline)
+            var cans = cans - 1;
+        };
+        song.innerHTML += cans + " can of Axe Body Spray on the wall";
+        song.appendChild(newline)
+        song.innerHTML += cans + " can of Axe Body Spray on the wall";
+        song.appendChild(newline)
+        song.innerHTML += " Take one down, pass it around, no more deodorant on the wall :{";
+    </script>
+</body>
+</html>
