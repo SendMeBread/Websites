@@ -7,6 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
     <style>
         html{
             background-color: #000;
@@ -16,6 +17,9 @@
             font-family: 'Rubik Microbe', serif;
             font-size: 22px;
             text-align: center;
+        }
+        footer{
+            font-family: 'Press Start 2P', cursive;
         }
         #song{
             background: -webkit-linear-gradient(#00e 10%, #ffe0bd 70%, #6f4f1d);
@@ -45,11 +49,29 @@
     </main>
     <p id="sponsor">Sponsored By</p>
     <img id="logo" src="AxeLogo.png">
+    <footer>
+        <a id="vLink1" style="color: #e44d26;">HTML --> VALID!</a>
+        <br>
+        <br>
+        <a id="vLink2" style="color: #264de4;">CSS --> VALID!</a>
+        <br>
+        <br>
+    </footer>
     <script>
+        //Validation Code:
+        function init() {
+            const loc = window.location.href;
+            const HTMLvalidLink = 'http://validator.w3.org/check?uri=' + loc;
+            const CSSvalidLink = 'http://jigsaw.w3.org/css-validator/validator?uri=' + loc + '?profile=css3';
+            document.getElementById("vLink1").setAttribute("href", HTMLvalidLink);
+            document.getElementById("vLink2").setAttribute("href", CSSvalidLink);
+        };
+        window.onload = init;
+        //Song Code:
         const newline = document.createElement("br");
         let song = document.getElementById("song");
         var cans = 99;
-        while (cans > 1){
+        while (cans > 1) {
             const songAppend = cans + " cans of Axe Body Spray on the wall";
             song.innerHTML += songAppend;
             song.appendChild(newline)
