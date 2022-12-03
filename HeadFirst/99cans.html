@@ -11,6 +11,7 @@
     <style>
         html{
             background-color: #000;
+            scroll-behavior: smooth; /* No immediate scrolling */
         }
         body{
             background-image: linear-gradient(#000 30%, #6f4f1d 60%, #00e, #ffe0bd);
@@ -21,8 +22,23 @@
         footer{
             font-family: 'Press Start 2P', cursive;
         }
+        button{
+            display: inline;
+            float: right;
+            border-width: 10px;
+            border-right-color: #08b;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 10px;
+            border-top-color: #00e;
+            border-left-color: #05f;
+            border-bottom-color: transparent;
+            background-color: #326;
+            font-family: "Orbitron", sans-serif;
+            color: #fff;
+            margin-right: 25pt;
+        }
         #song{
-            background: -webkit-linear-gradient(#00e 10%, #ffe0bd 70%, #6f4f1d);
+            background: -webkit-linear-gradient(#00e 10%, #ffe0bd 70%, #6f4f1d); /* Is really for text */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             color: transparent;
@@ -45,10 +61,15 @@
     </style>
 </head>
 <body>
+<!--Top of Page-->
     <img id="TopDeod" src="AxeBodySpray.png" alt="FavDeodorant">
+    <button id="scroll">Scroll Down</button>
+<!--Song Start-->
     <main id="song">
     </main>
+<!--Song End-->
     <p id="sponsor">Sponsored By</p>
+<!--Bottom Logo-->
     <img id="logo" src="AxeLogo.png" alt="OurSponsor">
     <footer>
         <a id="vLink1" style="color: #e44d26;">HTML --> VALID!</a>
@@ -87,6 +108,12 @@
         song.innerHTML += cans + " can of Axe Body Spray on the wall";
         song.appendChild(newline)
         song.innerHTML += " Take one down, pass it around, no more deodorant on the wall :{";
+        //Auto Scroll Code:
+        let scrollButton = document.getElementById("scroll");
+        let pageEnd = document.getElementById("sponsor");
+        scrollButton.addEventListener("click", function() {
+            pageEnd.scrollIntoView();
+        });
     </script>
 </body>
 </html>
