@@ -5,18 +5,35 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Phrase-O-Matic</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        html{
+            background-color: #000;
+            background-image: linear-gradient(35deg, #fff, #04a6e8, #92f9, #000);
+            background-size: 100vw 100vh;
+            background-repeat: no-repeat;
+            color: #dc143c;
+            text-align: center;
+        }
+        #phrase{
+            display: table-cell;
+            vertical-align: middle;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
     <script>
+        const phraseElem = document.getElementById("phrase");
+        function randomColor(){
+            let randColor = Math.floor(Math.random()*16777215).toString(16);
+            phraseElem.style.color = "#" + randColor;
+        }
         function createPhrases(){
-            let phraseElem = document.getElementById("phrase");
-
             let words1 = ["Barney", "SCP-173 (Almighty Nut)", "Bighand", "SCP-096 (Angry White Man)", "You"];
-            let words2 = ["ate", "danced with", "whipped", "clapped", "soluted"]
-            let words3 = ["Jeff Bezos", "A Drunk Irish man", "King Henry The VIII", "The Virgin Queen", "Freddie Mercury"]
-
+            let words2 = ["ate", "danced with", "whipped", "clapped", "soluted"];
+            let words3 = ["Jeff Bezos", "A Drunk Irish man", "King Henry The VIII", "The Virgin Queen", "Freddie Mercury"];
             let rand1 = Math.floor(Math.random() * words1.length);
             let rand2 = Math.floor(Math.random() * words2.length);
             let rand3 = Math.floor(Math.random() * words3.length);
-
             let phrase = words1[rand1] + " " + words2[rand2] + " " + words3[rand3] + ".";
             phraseElem.innerHTML = phrase;
         };
@@ -24,6 +41,7 @@
     </script>
 </head>
 <body>
-    <p id="phrase"></p>
+    Phrase-o-Matic!
+    <div id="phrase"></div>
 </body>
 </html>
