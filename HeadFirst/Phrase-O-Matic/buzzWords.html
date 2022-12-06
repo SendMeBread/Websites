@@ -22,12 +22,8 @@
         }
     </style>
     <script>
-        const phraseElem = document.getElementById("phrase");
-        function randomColor(){
-            let randColor = Math.floor(Math.random()*16777215).toString(16);
-            phraseElem.style.color = "#" + randColor;
-        }
         function createPhrases(){
+            let phraseElem = document.getElementById("phrase");
             let words1 = ["Barney", "SCP-173 (Almighty Nut)", "Bighand", "SCP-096 (Angry White Man)", "You"];
             let words2 = ["ate", "danced with", "whipped", "clapped", "soluted"];
             let words3 = ["Jeff Bezos", "A Drunk Irish man", "King Henry The VIII", "The Virgin Queen", "Freddie Mercury"];
@@ -36,6 +32,8 @@
             let rand3 = Math.floor(Math.random() * words3.length);
             let phrase = words1[rand1] + " " + words2[rand2] + " " + words3[rand3] + ".";
             phraseElem.innerHTML = phrase;
+            let randColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+            phraseElem.style.color = randColor;
         };
         window.onload = createPhrases;
     </script>
