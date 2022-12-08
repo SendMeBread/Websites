@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Planets</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        #greenplanetH2{
+            color: #0f0;
+        }
+        #redplanetH2{
+            color: #f00;
+        }
+        #blueplanetH2{
+            color: #00f;
+        }
+    </style>
+</head>
+<body>
+    <h1>Planet Diagnostics:</h1>
+    <br><br>
+    <h2 id = "greenplanetH2">Green Planet:</h2>
+    <p id="greenplanet">All is well.</p>
+    <br>
+    <h2 id="redplanetH2">Red Planet:</h2>
+    <p> Nothing to report... We're boring.</p>
+    <br>
+    <h2 id="blueplanetH2">Blue Planet:</h2>
+    <p>All system decent.</p>
+    <script>
+        let Gplanet = document.getElementById("greenplanet");
+        Gplanet.innerHTML = "Red Alert: Hit By Pew Pew!";
+    </script>
+</body>
+</html>
