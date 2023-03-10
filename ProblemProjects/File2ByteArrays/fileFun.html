@@ -30,7 +30,7 @@
     window.onload = init;
         const output = document.getElementById("output");
         function openFile(){
-            let input = document.getElementById("upload").files[0];
+            let input = document.getElementById("file").files[0];
             let reader = new FileReader()
             reader.readAsArrayBuffer(input)
             reader.onload = function(){
@@ -43,7 +43,7 @@
     </script>
     <form>
         <label for="file">Upload a file! (No viruses please...)</label>
-        <input type="file" name="file" id="upload" required>
+        <input type="file" name="file" id="file" required>
         <br>
         <label for="submit">See Byte Array!</label>
     </form>
