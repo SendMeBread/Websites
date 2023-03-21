@@ -15,6 +15,19 @@
             align-items: center;
             height: 100vh;
         }
+        @keyframes Q28A{
+            0% {background-color: #fff;}
+            10% {background-color: #ae1533;}
+            20% {background-color: #3d973d;}
+            30% {background-color: #ff6347;}
+            40% {background-color: #deb887;}
+            50% {background-color: #1818cf;}
+            60% {background-color: #deb887;}
+            70% {background-color: #ff6347;}
+            80% {background-color: #3d973d;}
+            90% {background-color: #ae1533;}
+            100% {background-color: #fff;}
+        }
         #glow{
             width: calc(20px * (22/7));
             height: calc(20px * (22/7));
@@ -37,6 +50,10 @@
             transition: 2s;
         }
         #glow:hover{
+            animation-name: Q28A;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
             box-shadow: 0 0 0 30px #1818cf,
             0 0 0 60px #1818cf,
             0 0 0 100px #1818cf,
