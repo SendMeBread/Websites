@@ -6,15 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q32A</title>
     <style>
-        @keyframes identifier {
-            from{
-            }
-            to{
-            }
+        body{
+            display: flex;
+            margin: 0;
+            padding: 0;
+            background: #000;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #glow{
+            width: calc(20px * (22/7));
+            height: calc(20px * (22/7));
+            background: #21218a;
+            border-radius: 50%;
+            box-shadow: 0 0 calc(10px * (22/7)) #1818cf,
+            0 0 calc(20px * (22/7)) #1818cf,
+            0 0 calc(30px * (22/7)) #1818cf,
+            0 0 calc(40px * (22/7)) #1818cf,
+            0 0 calc(50px * (22/7)) #1818cf,
+            0 0 calc(60px * (22/7)) #1818cf,
+            0 0 calc(70px * (22/7)) #1818cf,
+            0 0 calc(80px * (22/7)) #1818cf,
+            0 0 calc(100px * (22/7)) #1818cf,
+            0 0 calc(135px * (22/7)) #1818cf,
+            0 0 calc(170px * (22/7)) #1818cf,
+            0 0 calc(220px * (22/7)) #1818cf,
+            0 0 calc(280px * (22/7)) #1818cf,
+            0 0 calc(330px * (22/7)) #1818cf;
+            transition: 2s;
+        }
+        #glow:hover{
+            box-shadow: 0 0 0 30px #1818cf,
+            0 0 0 60px #1818cf,
+            0 0 0 100px #1818cf,
+            0 0 0 120px #1818cf,
+            0 0 0 200px #1818cf,
+            0 0 0 350px #1818cf,
+            0 0 0 425px #1818cf;
         }
     </style>
 </head>
 <body>
-    
+    <div id="glow"></div>
 </body>
 </html>
