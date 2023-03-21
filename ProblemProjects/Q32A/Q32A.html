@@ -29,19 +29,6 @@
             align-items: center;
             height: 100vh;
         }
-        @keyframes Q32A_move{
-            0% {left: 5%;}
-            10% {left: 10%;}
-            20% {left: 20%;}
-            30% {left: 30%;}
-            40% {left: 40%;}
-            50% {left: 50%;}
-            60% {left: 60%;}
-            70% {left: 70%;}
-            80% {left: 80%;}
-            90% {left: 90%;}
-            100% {left: 95%;}
-        }
         @keyframes Q32A_colorChange{
             0% {background-color: #000; height: calc(20px * (22/7)); width: calc(20px * (22/7));}
             10% {background-color: #ae1533; height: calc(30px * (22/7)); width: calc(30px * (22/7));}
@@ -56,10 +43,6 @@
             100% {background-color: #fff; height: calc(50px * (22/7)); width: calc(50px * (22/7));}
         }
         #glow{
-            animation-name: Q32A_move;
-            animation-duration: 6s;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
             width: calc(20px * (22/7));
             height: calc(20px * (22/7));
             background: #21218a;
@@ -81,8 +64,7 @@
             transition: 2s;
         }
         #glow:hover:active{
-            animation-name: Q32A_colorChange;
-            animation-duration: 15s;
+            animation: Q32A_colorChange 15s;
             animation-iteration-count: infinite;
             animation-direction: alternate;
             box-shadow: 0 0 0 30px #1818cf,
