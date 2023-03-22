@@ -20,16 +20,24 @@
         a{
             z-index: 1;
         }
-        body{
+        body, html{
+            background: #000;
+            color: #fff;
+            text-align: center;
+            z-index: 1;
+            overflow: hidden;
+            font-size: 28px;
+        }
+        #container{
             display: flex;
             margin: 0;
             padding: 0;
-            background: #000;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            z-index: 0;
         }
-        @keyframes Q32A_colorChange{
+        @keyframes colorChange{
             0% {background-color: #000; height: calc(20px * (22/7)); width: calc(20px * (22/7));}
             10% {background-color: #ae1533; height: calc(30px * (22/7)); width: calc(30px * (22/7));}
             20% {background-color: #3d973d; height: calc(20px * (22/7)); width: calc(20px * (22/7));}
@@ -64,7 +72,7 @@
             transition: 2s;
         }
         #glow:hover:active{
-            animation: Q32A_colorChange 15s;
+            animation: colorChange 15s;
             animation-iteration-count: infinite;
             animation-direction: alternate;
             box-shadow: 0 0 0 30px #1818cf,
@@ -78,10 +86,11 @@
     </style>
 </head>
 <body>
-    <a id="vlink1" style="color: #ff6600;"><strong>HTML: VALID!</strong></a>
-    <br><br>
-    <div id="glow" style="z-index: 0;"></div>
-    <br><br>
-    <a id="vlink2" style="color: #6699ff;"><strong>CSS: VALID!</strong></a>
+    <span>32: What is the purpose of the CSS @keyframes rule? - d. - It defines an animation and it's position, and it is required.</span>
+    <span id="container">
+        <a id="vlink1" style="color: #ff6600;"><strong>HTML: VALID!</strong></a>
+        <span id="glow" style="z-index: 0;"></span>
+        <a id="vlink2" style="color: #6699ff;"><strong>CSS: VALID!</strong></a>
+    </span>
 </body>
 </html>
