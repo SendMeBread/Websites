@@ -59,6 +59,9 @@
             width: calc(20px * (22/7));
             height: calc(20px * (22/7));
             background: #21218a;
+            animation: colorChange 15s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
             border-radius: 50%;
             box-shadow: 0 0 calc(10px * (22/7)) #1818cf,
             0 0 calc(20px * (22/7)) #1818cf,
@@ -76,10 +79,7 @@
             0 0 calc(330px * (22/7)) #1818cf;
             transition: 4s;
         }
-        #glow:hover:active{
-            animation: colorChange 15s;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
+        #glow:hover{
             box-shadow: 0 0 0 30px #1818cf,
             0 0 0 60px #1818cf,
             0 0 0 100px #1818cf,
