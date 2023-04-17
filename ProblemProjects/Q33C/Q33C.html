@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q33C</title>
     <script>
-        font_list = [1,2,3,4]
+        font_list = ["RubikPuddles Regular", "BungeeSpice Regular", "BigShoulderStencilText-Black", "Nabla Regular"]
         greetings = ["Good Morning", "Buenos días", "Guten Morgen", "Bonjour", "Bom dia", "Buongiorno"]
-        document.getElementById().addEventListener("click", addFont());
-        function addFont{
+        document.getElementById("button").addEventListener("click", addFont());
+        function addFont(){
             for(let i = 0; i < greetings.length; i++){
                 for(let x = 0; x < font_list.length; i++){
-                    document.getElementById
-                }
-            }
-        }
+                    document.getElementById("goodMorning").style.fontFamily = font_list[x];
+                };
+                document.getElementById("goodMorning").innerHTML = greetings[i];
+            };
+        };
     </script>
     <style>
         html, body{
@@ -55,6 +56,6 @@
     </style>
 </head>
 <body id="goodMorning">
-    <button>Good Morning!</button>
+    <button id="button">Good Morning!</button>
 </body>
 </html>
