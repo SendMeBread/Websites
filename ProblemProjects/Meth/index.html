@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bit Calc</title>
+    <style>
+        body, html{
+            color: #3f3;
+            background-color: #000;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        select, input{
+            color: #f00;
+            background-color: #00f;
+            border-radius: 8px;
+        }
+    </style>
+    <script>
+        //Binary data units:
+        const byte = 2 ** 3
+        const kibibyte = 2 ** 10
+        const mebibyte = 2 ** 20
+        const gibibyte = 2 ** 30
+        const tebibyte = 2 ** 40
+        const pebibyte = 2 ** 50
+        const exbibyte = 2 ** 60
+        const zebibyte = 2 ** 70
+        const yobibyte = 2 ** 80
+        //Decimal data units:
+        const bit = 1
+        const kilobyte = 10 ** 3
+        const megabyte = 10 ** 6
+        const gigabyte = 10 ** 9
+        const terabyte = 10 ** 12
+        const petabyte = 10 ** 15
+        const exabyte = 10 ** 18
+        const zettabyte = 10 ** 21
+        const yottabyte = 10 ** 24
+        function calc(){
+            let output = document.getElementById("output")
+            let units = document.getElementById("units")
+            let num = document.getElementById("num")
+            let choice = units.value
+            let val = num.valueAsNumber
+            if (choice === "b"){
+                val = val * bit
+            } else if (choice === "B"){
+                val = val * byte
+            } else if (choice === "KB"){
+                val = val * kilobyte
+            } else if (choice === "KiB"){
+                val = val * kibibyte
+            } else if (choice ===  "MB"){
+                val = val * megabyte
+            } else if (choice === "MiB"){
+                val = val * mebibyte
+            } else if (choice === "GB"){
+                val = val * gigabyte
+            } else if (choice === "GiB"){
+                val = val * gibibyte
+            } else if (choice === "TB"){
+                val = val * terabyte
+            } else if (choice === "TiB"){
+                val = val * tebibyte
+            } else if (choice === "PB"){
+                val = val * petabyte
+            } else if (choice === "PiB"){
+                val = val * pebibyte
+            } else if (choice === "EB"){
+                val = val * exabyte
+            } else if (choice === "EiB"){
+                val = val * exbibyte
+            } else if (choice === "ZB"){
+                val = val * zettabyte
+            } else if (choice === "ZiB"){
+                val = val * zebibyte
+            } else if (choice === "YB"){
+                val = val * yottabyte
+            } else if (choice === "YiB"){
+                val = val * yobibyte
+            }
+            output.innerHTML = val
+        }
+    </script>
+</head>
+<body>
+    <form onchange="calc()">
+        <label for="num">Input number of this unit:</label>
+        <input type="number" id="num" name="num" min="1">
+        <label for="units">Select units:</label>
+        <select name="units" id="units">
+            <option value="b">Bit</option>
+            <option value="B">Byte</option>
+            <option value="KB">Kilobyte</option>
+            <option value="KiB">Kibibyte</option>
+            <option value="MB">Megabyte</option>
+            <option value="MiB">Mebibyte</option>
+            <option value="GB">Gigabyte</option>
+            <option value="GiB">Gibibyte</option>
+            <option value="TB">Terabyte</option>
+            <option value="TiB">Tebibyte</option>
+            <option value="PB">Petabyte</option>
+            <option value="PiB">Pebibyte</option>
+            <option value="EB">Exabyte</option>
+            <option value="EiB">Exbibyte</option>
+            <option value="ZB">Zettabyte</option>
+            <option value="ZiB">Zebibyte</option>
+            <option value="YB">Yottabyte</option>
+            <option value="YiB">Yobibyte</option>
+        </select>
+    </form>
+    <br><br>
+    <div id="output"></div>
+</body>
+</html>
