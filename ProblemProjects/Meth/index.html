@@ -20,70 +20,70 @@
     </style>
     <script>
         //Binary data units:
-        const byte = 2 ** 3
-        const kibibyte = 2 ** 10
-        const mebibyte = 2 ** 20
-        const gibibyte = 2 ** 30
-        const tebibyte = 2 ** 40
-        const pebibyte = 2 ** 50
-        const exbibyte = 2 ** 60
-        const zebibyte = 2 ** 70
-        const yobibyte = 2 ** 80
+        const byte = 2 ** 3;
+        const kibibyte = 2 ** 10;
+        const mebibyte = 2 ** 20;
+        const gibibyte = 2 ** 30;
+        const tebibyte = 2 ** 40;
+        const pebibyte = 2 ** 50;
+        const exbibyte = 2 ** 60;
+        const zebibyte = 2 ** 70;
+        const yobibyte = 2 ** 80;
         //Decimal data units:
         const bit = 1
-        const kilobyte = 10 ** 3
-        const megabyte = 10 ** 6
-        const gigabyte = 10 ** 9
-        const terabyte = 10 ** 12
-        const petabyte = 10 ** 15
-        const exabyte = 10 ** 18
-        const zettabyte = 10 ** 21
-        const yottabyte = 10 ** 24
+        const kilobyte = 10 ** 3;
+        const megabyte = 10 ** 6;
+        const gigabyte = 10 ** 9;
+        const terabyte = 10 ** 12;
+        const petabyte = 10 ** 15;
+        const exabyte = 10 ** 18;
+        const zettabyte = 10 ** 21;
+        const yottabyte = 10 ** 24;
         function calc(){
-            let output = document.getElementById("output")
-            let units = document.getElementById("units")
-            let num = document.getElementById("num")
-            let choice = units.value
-            let val = num.valueAsNumber
+            let output = document.getElementById("output");
+            let units = document.getElementById("units");
+            let num = document.getElementById("num");
+            let choice = units.value;
+            let val = num.valueAsNumber;
             if (choice === "b"){
-                val = val * bit
+                val = val * bit;
             } else if (choice === "B"){
-                val = val * byte
+                val = val * byte;
             } else if (choice === "KB"){
-                val = val * kilobyte
+                val = val * kilobyte;
             } else if (choice === "KiB"){
-                val = val * kibibyte
+                val = val * kibibyte;
             } else if (choice ===  "MB"){
-                val = val * megabyte
+                val = val * megabyte;
             } else if (choice === "MiB"){
-                val = val * mebibyte
+                val = val * mebibyte;
             } else if (choice === "GB"){
-                val = val * gigabyte
+                val = val * gigabyte;
             } else if (choice === "GiB"){
-                val = val * gibibyte
+                val = val * gibibyte;
             } else if (choice === "TB"){
-                val = val * terabyte
+                val = val * terabyte;
             } else if (choice === "TiB"){
-                val = val * tebibyte
+                val = val * tebibyte;
             } else if (choice === "PB"){
-                val = val * petabyte
+                val = val * petabyte;
             } else if (choice === "PiB"){
-                val = val * pebibyte
+                val = val * pebibyte;
             } else if (choice === "EB"){
-                val = val * exabyte
+                val = val * exabyte;
             } else if (choice === "EiB"){
-                val = val * exbibyte
+                val = val * exbibyte;
             } else if (choice === "ZB"){
-                val = val * zettabyte
+                val = val * zettabyte;
             } else if (choice === "ZiB"){
-                val = val * zebibyte
+                val = val * zebibyte;
             } else if (choice === "YB"){
-                val = val * yottabyte
+                val = val * yottabyte;
             } else if (choice === "YiB"){
-                val = val * yobibyte
-            }
-            output.innerHTML = val
-        }
+                val = val * yobibyte;
+            };
+            output.innerHTML = val;
+        };
     </script>
 </head>
 <body>
